@@ -1,0 +1,240 @@
+.page-home h1 {
+  margin-top: 0;
+}
+
+.page-home .muted {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.page-home .cards {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.page-home .card {
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  color: inherit;
+}
+
+.page-home .card:hover {
+  border-color: var(--accent);
+  text-decoration: none;
+  color: inherit;
+}
+
+.page-home .card h2 {
+  margin: 0 0 0.5rem;
+  font-size: 1.1rem;
+}
+
+.page-home .card p {
+  margin: 0;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.page-projects .project-list,
+.page-docs .doc-list,
+.page-notes .notes-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.page-projects .project-card {
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.page-projects .project-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.page-projects .project-head h2 {
+  margin: 0;
+  font-size: 1.15rem;
+}
+
+.page-projects .summary {
+  color: var(--text-muted);
+  margin: 0.25rem 0;
+  font-size: 0.9rem;
+}
+
+.page-projects .path {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0;
+}
+
+.page-projects .btn {
+  flex-shrink: 0;
+  padding: 0.35rem 0.75rem;
+  background: var(--accent);
+  color: #fff;
+  border-radius: 6px;
+  font-size: 0.85rem;
+}
+
+.page-projects .btn:hover {
+  background: var(--accent-hover);
+  color: #fff;
+  text-decoration: none;
+}
+
+.page-projects .link-docs {
+  font-size: 0.9rem;
+}
+
+.page-docs .doc-list li {
+  padding: 0.5rem 0;
+}
+
+.page-docs .doc-list li .muted {
+  font-size: 0.9rem;
+}
+
+.page-docs .doc-content {
+  margin-top: 1rem;
+}
+
+.page-docs .markdown {
+  margin-bottom: 1.5rem;
+}
+
+.page-docs .markdown h1,
+.page-docs .markdown h2,
+.page-docs .markdown h3 {
+  margin-top: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.page-docs .markdown pre,
+.page-docs .markdown code {
+  background: var(--surface);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.page-docs .markdown pre {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.page-docs .markdown pre code {
+  padding: 0;
+}
+
+.page-notes .empty {
+  margin-top: 1rem;
+}
+
+.page-notes .empty pre {
+  background: var(--surface);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+}
+
+.page-notes .notes-list li {
+  padding: 0.5rem 0;
+}
+
+.page-add-note .form-group {
+  margin-bottom: 1rem;
+}
+
+.page-add-note .form-group label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-size: 0.9rem;
+}
+
+.page-add-note .form-group input,
+.page-add-note .form-group textarea {
+  width: 100%;
+  max-width: 480px;
+  padding: 0.5rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  font-family: inherit;
+}
+
+.page-add-note .form-group textarea {
+  min-height: 200px;
+  resize: vertical;
+}
+
+.page-add-note .form-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.page-add-note .btn {
+  padding: 0.5rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.page-add-note .btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.page-add-note .btn-primary {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+
+.page-add-note .btn-primary:hover {
+  background: var(--accent-hover);
+  border-color: var(--accent-hover);
+  color: #fff;
+}
+
+.page-add-note .preview-block {
+  margin-top: 1.5rem;
+  padding: 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+}
+
+.page-add-note .preview-block h3 {
+  margin-top: 0;
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+}
+
+.page-add-note .instruction {
+  margin-top: 1rem;
+  font-size: 0.85rem;
+}
+
+.page-add-note .instruction code {
+  background: var(--surface);
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+}
+
+.muted {
+  color: var(--text-muted);
+}

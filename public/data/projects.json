@@ -1,0 +1,18 @@
+[
+  {
+    "id": "ptz100_agx",
+    "name": "ptz100_agx",
+    "summary": "PTZ 相关工程：公共组件、物联网设备 SDK、ROS 等",
+    "repoUrl": "https://github.com/aoxiang706/skyfend_work_hub",
+    "path": "workspace/ptz100_agx",
+    "docsPath": "/docs/ptz100_agx"
+  },
+  {
+    "id": "me_git_lab",
+    "name": "me_git_lab",
+    "summary": "个人 Git 仓库文档与资料（来自 E:\\code\\me_git_lab）",
+    "repoUrl": "",
+    "path": "E:\\code\\me_git_lab",
+    "docsPath": "/docs/me_git_lab"
+  }
+]
