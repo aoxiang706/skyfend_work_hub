@@ -7,6 +7,24 @@
   margin-bottom: 1.5rem;
 }
 
+.page-home .home-url {
+  margin-bottom: 1.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 0.95rem;
+}
+
+.page-home .home-url a {
+  color: var(--accent);
+  word-break: break-all;
+}
+
+.page-home .home-url a:hover {
+  text-decoration: underline;
+}
+
 .page-home .cards {
   display: grid;
   gap: 1rem;

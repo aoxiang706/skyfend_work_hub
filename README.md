@@ -2,6 +2,9 @@
 
 个人工作内容整理：项目列表、文档、笔记资料、代码仓链接。静态站点，可用 GitHub Pages 部署，换电脑打开同一网址即可访问。
 
+**网页首页地址（直接打开即可访问）：**  
+[https://aoxiang706.github.io/skyfend_work_hub/](https://aoxiang706.github.io/skyfend_work_hub/)
+
 - **GitHub**：[aoxiang706](https://github.com/aoxiang706)
 
 ## 本地运行
