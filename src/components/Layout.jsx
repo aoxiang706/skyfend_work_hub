@@ -28,7 +28,7 @@ export default function Layout({ children }) {
           ))}
         </nav>
       </header>
-      <main className="main">
+      <main className={`main ${(location.pathname.startsWith('/notes') || location.pathname.startsWith('/docs')) ? 'main-wide' : ''}`}>
         {children}
       </main>
       <footer className="footer">

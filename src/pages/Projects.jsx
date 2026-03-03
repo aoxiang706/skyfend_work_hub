@@ -31,7 +31,7 @@ export default function Projects() {
             </div>
             <p className="summary">{p.summary}</p>
             {p.path && <p className="path">路径：{p.path}</p>}
-            <Link to={`/docs/${p.id}`} className="link-docs">查看文档 →</Link>
+            <Link to={`/docs/view/${p.id}`} className="link-docs">查看文档 →</Link>
           </li>
         ))}
       </ul>

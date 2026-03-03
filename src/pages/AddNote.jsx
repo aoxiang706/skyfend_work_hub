@@ -39,12 +39,12 @@ export default function AddNote() {
         />
       </div>
       <div className="form-group">
-        <label>分类（可选，用于文件名前缀）</label>
+        <label>分类（用于侧边栏筛选与标签展示）</label>
         <input
           type="text"
           value={category}
           onChange={(e) => setCategory(e.target.value)}
-          placeholder="如：工作总结、Cursor 任务"
+          placeholder="如：项目文档、设备/SDK、工作笔记"
         />
       </div>
       <div className="form-group">
@@ -82,7 +82,9 @@ export default function AddNote() {
       </div>
 
       <div className="muted instruction">
-        <strong>入库步骤：</strong> 下载的 .md 放入 <code>public/content/notes/</code>，在 <code>public/content/notes/index.json</code> 的 <code>items</code> 中增加一条，如：<code>{`{"id": "xxx", "title": "标题", "file": "文件名.md"}`}</code>，然后 commit 并 push，网站更新后即可在「笔记资料」中看到。
+        <strong>入库步骤：</strong> 下载的 .md 放入 <code>public/content/notes/</code>，在 <code>index.json</code> 的 <code>items</code> 中增加一条，推荐格式：<br />
+        <code>{`{ "id": "唯一id", "title": "标题", "file": "文件名.md", "category": "分类名", "date": "2026-03-03", "excerpt": "摘要（可选）" }`}</code><br />
+        然后 commit 并 push，即可在「笔记资料」中按分类浏览、站内阅读。
       </div>
     </section>
   )

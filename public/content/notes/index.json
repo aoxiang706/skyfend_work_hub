@@ -1,3 +1,12 @@
 {
-  "items": []
+  "items": [
+    {
+      "id": "sample",
+      "title": "示例笔记",
+      "file": "sample.md",
+      "category": "工作笔记",
+      "date": "2026-03-03",
+      "excerpt": "这是一条示例。将 MD 文件放入 public/content/notes/，在 index.json 中按分类添加条目，即可在站内以笔记列表与阅读页展示。"
+    }
+  ]
 }

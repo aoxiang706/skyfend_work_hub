@@ -168,6 +168,514 @@
   padding: 0.5rem 0;
 }
 
+/* ---------- 笔记列表：印象笔记/CSDN 风格 ---------- */
+.page-notes-list {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.notes-sidebar {
+  flex-shrink: 0;
+  width: 200px;
+  padding: 1rem 0;
+  border-right: 1px solid var(--border);
+}
+
+.notes-sidebar-title {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.notes-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.notes-nav-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.notes-nav-item:hover {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.notes-nav-item.active {
+  background: var(--surface);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.notes-sidebar-hint {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.notes-sidebar-hint code {
+  background: var(--surface);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+.notes-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.notes-header {
+  margin-bottom: 1.5rem;
+}
+
+.notes-header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+}
+
+.notes-empty {
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.notes-empty pre {
+  background: var(--bg);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  margin: 0.75rem 0 0;
+}
+
+.notes-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.notes-card-wrap {
+  margin: 0;
+}
+
+.notes-card {
+  display: block;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.notes-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+  color: inherit;
+  text-decoration: none;
+}
+
+.notes-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.notes-card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  flex: 1;
+  min-width: 0;
+}
+
+.notes-card-tag {
+  flex-shrink: 0;
+  padding: 0.2em 0.5em;
+  font-size: 0.75rem;
+  background: var(--border);
+  color: var(--text-muted);
+  border-radius: 4px;
+}
+
+.notes-card-excerpt {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.notes-card-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ---------- 笔记阅读页：站内文章视图 ---------- */
+.page-note-view {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.note-article-wrap {
+  padding: 1.5rem 0;
+}
+
+.note-article-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.note-back {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.note-back:hover {
+  color: var(--accent);
+}
+
+.note-article-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.note-article-tag {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.25em 0.6em;
+  font-size: 0.8rem;
+  background: var(--surface);
+  color: var(--accent);
+  border-radius: 4px;
+}
+
+.note-article-date {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.note-article-body {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.note-article-body.markdown h1,
+.note-article-body.markdown h2,
+.note-article-body.markdown h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.note-article-body.markdown h1 { font-size: 1.4rem; }
+.note-article-body.markdown h2 { font-size: 1.2rem; }
+.note-article-body.markdown h3 { font-size: 1.1rem; }
+
+.note-article-body.markdown pre,
+.note-article-body.markdown code {
+  background: var(--surface);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.note-article-body.markdown pre {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.note-article-body.markdown pre code {
+  padding: 0;
+}
+
+/* ---------- 文档列表：卡片 + 分类（与笔记同风格） ---------- */
+.page-docs-list {
+  display: flex;
+  gap: 2rem;
+  align-items: flex-start;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.docs-sidebar {
+  flex-shrink: 0;
+  width: 200px;
+  padding: 1rem 0;
+  border-right: 1px solid var(--border);
+}
+
+.docs-sidebar-title {
+  margin: 0 0 0.75rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  font-weight: 600;
+}
+
+.docs-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.docs-nav-item {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  text-align: left;
+  background: transparent;
+  border: none;
+  border-radius: 6px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.docs-nav-item:hover {
+  background: var(--surface);
+  color: var(--text);
+}
+
+.docs-nav-item.active {
+  background: var(--surface);
+  color: var(--accent);
+  font-weight: 500;
+}
+
+.docs-sidebar-hint {
+  margin-top: 1.5rem;
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.4;
+}
+
+.docs-sidebar-hint code {
+  background: var(--surface);
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  font-size: 0.85em;
+}
+
+.docs-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.docs-header {
+  margin-bottom: 1.5rem;
+}
+
+.docs-header h1 {
+  margin: 0 0 0.35rem;
+  font-size: 1.5rem;
+}
+
+.docs-empty {
+  padding: 2rem;
+  background: var(--surface);
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+.docs-empty pre {
+  background: var(--bg);
+  padding: 1rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  font-size: 0.85rem;
+  margin: 0.75rem 0 0;
+}
+
+.docs-card-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.docs-card-wrap {
+  margin: 0;
+}
+
+.docs-card {
+  display: block;
+  padding: 1.25rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  color: inherit;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.docs-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 4px 12px rgba(124, 58, 237, 0.15);
+  color: inherit;
+  text-decoration: none;
+}
+
+.docs-card-head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 0.5rem;
+}
+
+.docs-card-title {
+  margin: 0;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.35;
+  flex: 1;
+  min-width: 0;
+}
+
+.docs-card-tag {
+  flex-shrink: 0;
+  padding: 0.2em 0.5em;
+  font-size: 0.75rem;
+  background: var(--border);
+  color: var(--text-muted);
+  border-radius: 4px;
+}
+
+.docs-card-excerpt {
+  margin: 0 0 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  line-height: 1.45;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.docs-card-date {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+}
+
+/* ---------- 文档阅读页：站内文章视图 ---------- */
+.page-doc-view {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.doc-article-wrap {
+  padding: 1.5rem 0;
+}
+
+.doc-article-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.doc-back {
+  display: inline-block;
+  margin-bottom: 0.75rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.doc-back:hover {
+  color: var(--accent);
+}
+
+.doc-article-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.doc-article-tag {
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.25em 0.6em;
+  font-size: 0.8rem;
+  background: var(--surface);
+  color: var(--accent);
+  border-radius: 4px;
+}
+
+.doc-article-date {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.doc-article-body {
+  font-size: 1rem;
+  line-height: 1.75;
+}
+
+.doc-article-body.markdown h1,
+.doc-article-body.markdown h2,
+.doc-article-body.markdown h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.doc-article-body.markdown h1 { font-size: 1.4rem; }
+.doc-article-body.markdown h2 { font-size: 1.2rem; }
+.doc-article-body.markdown h3 { font-size: 1.1rem; }
+
+.doc-article-body.markdown pre,
+.doc-article-body.markdown code {
+  background: var(--surface);
+  padding: 0.2em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+.doc-article-body.markdown pre {
+  padding: 1rem;
+  overflow-x: auto;
+}
+
+.doc-article-body.markdown pre code {
+  padding: 0;
+}
+
 .page-add-note .form-group {
   margin-bottom: 1rem;
 }

@@ -15,7 +15,7 @@ export default function Home() {
         </a>
       </p>
       <div className="cards">
-        <Link to="/docs/me_git_lab" className="card">
+        <Link to="/docs/view/me_git_lab" className="card">
           <h2>目录整理</h2>
           <p>E:\code\me_git_lab 目录总览与分类（项目、文档、和普/耐杰 PTZ 等）。</p>
         </Link>
