@@ -3,14 +3,15 @@ import { useState, useEffect } from 'react'
 import ReactMarkdown from 'react-markdown'
 import './pages.css'
 
+const BASE = import.meta.env.BASE_URL || '/'
 const DOCS = {
   ptz100_agx: {
     title: 'ptz100_agx',
-    file: '/docs/ptz100_agx.md',
+    file: `${BASE}docs/ptz100_agx.md`,
   },
   me_git_lab: {
     title: 'me_git_lab',
-    file: '/docs/me_git_lab.md',
+    file: `${BASE}docs/me_git_lab.md`,
   },
 }
 
@@ -21,7 +22,7 @@ export default function Docs() {
   const [projects, setProjects] = useState([])
 
   useEffect(() => {
-    fetch('/data/projects.json')
+    fetch(`${BASE}data/projects.json`)
       .then((r) => (r.ok ? r.json() : []))
       .then(setProjects)
       .catch(() => setProjects([]))

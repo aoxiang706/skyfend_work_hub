@@ -6,7 +6,7 @@
 
 ## 本地运行
 
-需先安装 [Node.js](https://nodejs.org/)（含 npm）。
+需先安装 [Node.js](https://nodejs.org/)（含 npm）。Windows 安装方式见下方「Windows 上安装 Node/npm」。
 
 ```bash
 cd skyfend_work_hub
@@ -15,6 +15,22 @@ npm run dev
 ```
 
 浏览器打开终端提示的地址（通常 `http://localhost:5173`）。
+
+### Windows 上安装 Node/npm
+
+可以安装，且推荐用官方安装包或 nvm-windows：
+
+1. **官方安装包（推荐）**  
+   - 打开 [Node.js 官网](https://nodejs.org/)，下载 LTS 版本（.msi）。  
+   - 双击安装，勾选「Automatically install the necessary tools」可顺带配置 npm。  
+   - 安装完成后重新打开终端，执行 `node -v` 和 `npm -v` 检查是否成功。
+
+2. **nvm-windows（多版本切换）**  
+   - 从 [nvm-windows 发布页](https://github.com/coreybutler/nvm-windows/releases) 下载 `nvm-setup.exe` 并安装。  
+   - 在终端执行：`nvm install lts`，然后 `nvm use lts`。  
+   - 之后可用 `nvm install 20`、`nvm use 20` 等切换版本。
+
+安装完成后，在项目目录下执行 `npm install` 和 `npm run dev` 即可本地运行本站点。
 
 ## 构建与部署（GitHub Pages）
 

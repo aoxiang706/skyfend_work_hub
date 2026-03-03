@@ -1,11 +1,13 @@
 import { useState, useEffect } from 'react'
 import './pages.css'
 
+const BASE = import.meta.env.BASE_URL || '/'
+
 export default function Notes() {
   const [list, setList] = useState([])
 
   useEffect(() => {
-    fetch('/content/notes/index.json')
+    fetch(`${BASE}content/notes/index.json`)
       .then((r) => (r.ok ? r.json() : { items: [] }))
       .then((data) => setList(data.items || []))
       .catch(() => setList([]))
@@ -34,7 +36,7 @@ export default function Notes() {
           {list.map((n) => (
             <li key={n.id}>
               {n.file ? (
-                <a href={`/content/notes/${n.file}`} target="_blank" rel="noreferrer">
+                <a href={`${BASE}content/notes/${n.file}`} target="_blank" rel="noreferrer">
                   {n.title || n.id}
                 </a>
               ) : (

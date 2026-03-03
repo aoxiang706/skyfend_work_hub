@@ -2,11 +2,13 @@ import { Link } from 'react-router-dom'
 import { useState, useEffect } from 'react'
 import './pages.css'
 
+const BASE = import.meta.env.BASE_URL || '/'
+
 export default function Projects() {
   const [list, setList] = useState([])
 
   useEffect(() => {
-    fetch('/data/projects.json')
+    fetch(`${BASE}data/projects.json`)
       .then((r) => r.ok ? r.json() : [])
       .then(setList)
       .catch(() => setList([]))
